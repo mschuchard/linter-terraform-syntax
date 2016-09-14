@@ -1,0 +1,51 @@
+{
+  "name": "linter-terraform-syntax",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "Terraform lint via validate",
+  "repository": "https://github.com/mschuchard/linter-terraform-syntax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mschuchard/linter-terraform-syntax/issues"
+  },
+  "engines": {
+    "atom": ">0.95.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "atom-linter": "^5.0.2",
+    "atom-package-deps": "^3.0.9"
+  },
+  "package-deps": [
+    "linter",
+    "language-terraform"
+  ],
+  "devDependencies": {
+    "eslint": "latest",
+    "babel-eslint": "latest"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "strict": 0
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "globals": {
+      "atom": true
+    }
+  }
+}
