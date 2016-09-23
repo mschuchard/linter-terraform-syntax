@@ -1,10 +1,15 @@
 {
   "name": "linter-terraform-syntax",
-  "main": "./lib/main",
+  "main": "./lib/main.js",
   "version": "1.0.0",
   "description": "Terraform lint via validate",
   "repository": "https://github.com/mschuchard/linter-terraform-syntax",
   "license": "MIT",
+  "keywords": [
+    "lint",
+    "linter",
+    "terraform"
+  ],
   "bugs": {
     "url": "https://github.com/mschuchard/linter-terraform-syntax/issues"
   },
