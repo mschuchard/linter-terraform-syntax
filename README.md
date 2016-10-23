@@ -8,4 +8,3 @@
 
 ### Usage
 - This linter and `terraform validate` are both simple and straightforward, and therefore this has no special usage instructions.
-- This linter checks the syntax of every `.tf` in the directory of the open file and may display errors for other files in the directory. This will be fixed in the next release.
