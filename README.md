@@ -7,4 +7,4 @@
 `Terraform` is required to be installed before using this. The `Linter` and `Language-Terraform` atom packages are also required but should be automatically installed as dependencies thanks to steelbrain's `package-deps`.
 
 ### Usage
-- This linter and `terraform validate` are both simple and straightforward, and therefore this has no special usage instructions.
+- In the package settings there is an option to use `terraform plan` instead of `terraform validate`. Both options will show syntax errors for the current file and notify of the presence of non-syntax validation errors for the current directory. The plan option will additionally notify of the presence of non-syntax plan errors for the current directory. The actual error messages will be captured in an upcoming version.
