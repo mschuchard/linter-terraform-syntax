@@ -1,7 +1,10 @@
 ### Next (Roadmap)
-- capture messages for all kinds of formatted validate and plan non-syntax errors (note that this may inadvertently start capturing syntax errors elsewhere in the directory but probably will not due to the way I wrote the regexps)
+- Capture error messages for all kinds of formatted validate and plan non-syntax directory errors.
 - travisci
 - jasmine+babel
+- remove color codes and whitespace(?) from non-syntax directory errors with plan option
+- enable multiline non-syntax directory error capturing
+- improve code for parsing and capturing validate/plan output
 
 ### 1.1.0
 - Added severity key.
