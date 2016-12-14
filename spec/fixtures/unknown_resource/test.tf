@@ -1,12 +1,12 @@
 # Validate error in format of:
 # Error validating: 1 error(s) occurred:
 #
-#   * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
+# * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
 
 # Plan error in format of:
 # module root: 1 error(s) occurred:
 #
-#   * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
+# * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
 
 provider "digitalocean" {
   token = "12345"
