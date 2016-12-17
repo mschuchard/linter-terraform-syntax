@@ -1,5 +1,6 @@
 ### Next (Roadmap)
 - Capture error messages for all kinds of formatted validate and plan non-syntax directory errors.
+- Notify syntax errors for other Terraform files in directory.
 - travisci
 - jasmine+babel
 - improve code for parsing and capturing validate/plan output
