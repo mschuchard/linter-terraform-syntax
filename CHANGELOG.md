@@ -4,7 +4,6 @@
 - travisci
 - jasmine+babel
 - improve code for parsing and capturing validate/plan output
-- update tests for three other directories
 
 ### 1.1.0
 - Added severity key.
