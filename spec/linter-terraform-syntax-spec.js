@@ -77,9 +77,9 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].type).toBeDefined();
           expect(messages[0].type).toEqual('Error');
           expect(messages[0].text).toBeDefined();
-          expect(messages[0].text).toEqual("Syntax error in test.tf: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
+          expect(messages[0].text).toEqual("expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
           expect(messages[0].filePath).toBeDefined();
-          expect(messages[0].filePath).toMatch(/.+test_two\.tf$/);
+          expect(messages[0].filePath).toMatch(/.+test\.tf$/);
           expect(messages[0].range).toBeDefined();
           expect(messages[0].range.length).toBeDefined();
           expect(messages[0].range.length).toEqual(2);
@@ -115,8 +115,6 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].type).toEqual('Error');
           expect(messages[0].text).toBeDefined();
           expect(messages[0].text).toEqual("Non-syntax error in directory: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address.");
-          expect(messages[0].filePath).toBeDefined();
-          expect(messages[0].filePath).toMatch(/.+test\.tf$/);
         });
       });
     });

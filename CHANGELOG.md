@@ -4,7 +4,6 @@
 - travisci
 - jasmine+babel
 - improve code for parsing and capturing validate/plan output
-- change tests for inter-file syntax error change and no file display for non-syntax directory error
 
 ### 1.1.1
 - Capture error messages for all kinds of formatted `validate` and `plan` non-syntax errors in directory.
