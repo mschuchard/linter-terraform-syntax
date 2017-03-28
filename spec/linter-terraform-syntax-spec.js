@@ -8,7 +8,7 @@ describe('The Terraform Validate provider for Linter', () => {
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
     waitsForPromise(() => {
-      atom.packages.activatePackage('linter-terraform-validate');
+      atom.packages.activatePackage('linter-terraform-syntax');
       return atom.packages.activatePackage('language-terraform').then(() =>
         atom.workspace.open(path.join(__dirname, 'fixtures/clean', 'test.tf'))
       );
