@@ -2,11 +2,12 @@
 - Syntax errors for other files in the directory are now displayed within those files.
 - Non-syntax directory error message no longer has superfluous current file.
 - Removed color codes from displayed messages where applicable.
+- Experimental support for capturing deprecation warnings.
 - travisci
 - jasmine+babel
-- capture warnings: http://stackoverflow.com/questions/42886251/migrating-from-remote-state-to-backend-in-terraform-0-9
+- finish deprec warning capture (>= 0.9)
+- deprec warning test throws unaccounted for error format
 - linter 2 api
-- new interface stuff (linter-ui-default --> panel represents/statusbar represents --> entire project) in doc; click on line:col in panel for shortcut
 - clean spec now throws plan error
 - terraform fmt --help
 
