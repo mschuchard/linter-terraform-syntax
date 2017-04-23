@@ -1,0 +1,28 @@
+# setup environment
+sudo: false
+language: go
+
+notifications:
+  email: false
+
+git:
+  depth: 5
+
+# setup tests
+env:
+  global:
+    - APM_TEST_PACKAGES="language-terraform"
+    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+
+matrix:
+  include:
+  - os: linux
+  - os: linux
+    env: ATOM_CHANNEL=beta
+
+# execute tests
+install:
+  - wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip
+  - unzip terraform_0.9.3_linux_amd64.zip -d /usr/bin/
+before_script: terraform --version
+script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
