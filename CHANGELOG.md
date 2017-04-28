@@ -1,9 +1,8 @@
 ### Next (Roadmap)
-- travisci
+- Switched to using Linter v2 API.
 - jasmine+babel
 - finish deprec warning capture (>= 0.9)
 - deprec warning test throws unaccounted for error format
-- linter 2 api
 - clean spec now throws plan error
 - terraform fmt --help
 

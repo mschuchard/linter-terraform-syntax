@@ -1,5 +1,6 @@
 # setup environment
-sudo: false
+dist: trusty
+sudo: true
 language: go
 
 notifications:
@@ -22,7 +23,7 @@ matrix:
 
 # execute tests
 install:
-  - wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip
-  - unzip terraform_0.9.3_linux_amd64.zip -d /usr/bin/
+  - sudo wget https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_linux_amd64.zip
+  - sudo unzip terraform_0.9.3_linux_amd64.zip -d /usr/bin/
 before_script: terraform --version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
