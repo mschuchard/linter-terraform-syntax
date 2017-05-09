@@ -1,8 +1,6 @@
 # totally fine
 provider "aws" {
-  access_key = "123"
-  secret_key = "456"
-  region     = "789"
+  region     = "us-east-2"
 }
 
 resource "aws_instance" "example" {
