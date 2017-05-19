@@ -1,9 +1,11 @@
 ### Next (Roadmap)
-- Switched to using Linter v2 API.
-- Removed `atom-package-deps` dependency and functionality.
 - jasmine+babel
 - finish deprec warning capture (>= 0.9)
 - terraform fmt --help
+
+### 1.2.0
+- Switched to using Linter v2 API.
+- Removed `atom-package-deps` dependency and functionality.
 
 ### 1.1.2
 - Syntax errors for other files in the directory are now displayed within those files.
