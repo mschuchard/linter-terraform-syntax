@@ -1,7 +1,7 @@
 ### Next (Roadmap)
+- Prevent displaying useless block info line for directory errors in Terraform >= 0.9.
 - jasmine+babel
 - terraform fmt --help
-- output changed in 0.9 for missing_file and unknown_resource to give block info like packer/vagrant (but this already exists in specific errors so no capture necessary)
 
 ### 1.2.0
 - Switched to using Linter v2 API.
