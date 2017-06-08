@@ -4,7 +4,9 @@
 # * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
 
 # Plan error in format of:
-# module root: 1 error(s) occurred:
+# 1 error(s) occurred:
+#
+# * module root: 1 error(s) occurred:
 #
 # * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
 

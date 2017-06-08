@@ -1,8 +1,10 @@
 # No validate error.
 # Plan error in format of:
-# Errors:
+# 1 error(s) occurred:
 #
-# * file: open /foo/bar/baz: no such file or directory in:
+# * digitalocean_ssh_key.key: 1 error(s) occurred:
+#
+# * digitalocean_ssh_key.key: file: open /foo/bar/baz: no such file or directory in:
 #
 # ${file("/foo/bar/baz")}
 
