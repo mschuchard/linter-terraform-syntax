@@ -1,4 +1,4 @@
-# totally fine
+# for messing up formatting and verifying it is fixed
 provider "aws" {
   region = "us-east-2"
 }

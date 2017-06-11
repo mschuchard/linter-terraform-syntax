@@ -11,9 +11,10 @@
 
 data "terraform_remote_state" "state" {
   backend = "s3"
+
   config {
     bucket = "terraform-state-environment"
-    key = "network/terraform.tfstate"
+    key    = "network/terraform.tfstate"
     region = "region"
   }
 }

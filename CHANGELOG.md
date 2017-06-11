@@ -1,7 +1,7 @@
 ### Next (Roadmap)
 - Prevent displaying useless block info line for directory errors in Terraform >= 0.9.
+- Added `terraform fmt` config option.
 - jasmine+babel
-- terraform fmt --help
 
 ### 1.2.0
 - Switched to using Linter v2 API.
