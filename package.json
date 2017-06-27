@@ -1,7 +1,7 @@
 {
   "name": "linter-terraform-syntax",
   "main": "./lib/main.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Terraform lint via validate or plan",
   "repository": "https://github.com/mschuchard/linter-terraform-syntax",
   "license": "MIT",
