@@ -41,12 +41,9 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual("expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
-          expect(messages[0].location).toBeDefined();
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position.length).toBeDefined();
-          expect(messages[0].location.position.length).toEqual(2);
           expect(messages[0].location.position).toEqual([[8, 13], [8, 14]]);
         });
       });
@@ -79,12 +76,9 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual("expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
-          expect(messages[0].location).toBeDefined();
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position.length).toBeDefined();
-          expect(messages[0].location.position.length).toEqual(2);
           expect(messages[0].location.position).toEqual([[8, 13], [8, 14]]);
         });
       });
@@ -117,6 +111,10 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual("Non-syntax error in directory: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address.");
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+unknown_resource$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
         });
       });
     });

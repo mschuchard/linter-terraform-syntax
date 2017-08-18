@@ -1,5 +1,4 @@
 ### Next (Roadmap)
-- jasmine+babel
 
 ### 1.2.1
 - Prevent displaying useless block info line for directory errors in Terraform >= 0.9.

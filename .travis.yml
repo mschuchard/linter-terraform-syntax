@@ -23,7 +23,7 @@ matrix:
 
 # execute tests
 install:
-  - sudo wget https://releases.hashicorp.com/terraform/0.9.10/terraform_0.9.10_linux_amd64.zip
-  - sudo unzip terraform_0.9.10_linux_amd64.zip -d /usr/bin/
+  - sudo wget https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip
+  - sudo unzip terraform_0.9.11_linux_amd64.zip -d /usr/bin/
 before_script: terraform --version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
