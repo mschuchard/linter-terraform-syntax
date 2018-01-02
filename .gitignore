@@ -1,6 +1,5 @@
 .DS_Store
 npm-debug.log
 node_modules
-
-# Ignore those using yarn for now
-yarn.lock
+.terraform
+terraform.d

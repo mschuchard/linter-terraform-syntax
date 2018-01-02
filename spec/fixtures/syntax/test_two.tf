@@ -1,5 +1,7 @@
-# Validate error in format of:
+# <0.10: Validate error in format of:
 # Error loading files Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 5:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
+# 0.10: Validate error in format of:
+# Error: Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 9:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUBB
 
 # Plan error in format of:
 # Failed to load root config module: Error parsing syntax/test.tf: At 5:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
