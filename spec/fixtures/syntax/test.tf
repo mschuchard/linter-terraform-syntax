@@ -1,10 +1,10 @@
 # <0.10: Validate error in format of:
-# Error loading files Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 5:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
+# Error loading files Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 11:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
 # 0.10: Validate error in format of:
-# Error: Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 9:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
+# Error: Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 11:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
 
 # Plan error in format of:
-# Failed to load root config module: Error parsing syntax/test.tf: At 5:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
+# Failed to load root config module: Error parsing syntax/test.tf: At 11:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
 provider "aws" {
   access_key = "${var.access_key}"
   secret_key = "${var.secret_key}"
