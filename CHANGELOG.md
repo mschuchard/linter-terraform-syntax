@@ -1,5 +1,9 @@
 ### Next (Roadmap)
 
+
+### 1.2.2
+- Updated format captures and directory execution for 0.10 compatibility issues.
+
 ### 1.2.1
 - Prevent displaying useless block info line for directory errors in Terraform >= 0.9.
 - Added `terraform fmt` config option.

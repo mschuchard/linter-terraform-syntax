@@ -44,7 +44,7 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[8, 13], [8, 14]]);
+          expect(messages[0].location.position).toEqual([[10, 13], [10, 14]]);
         });
       });
     });
@@ -79,7 +79,7 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[8, 13], [8, 14]]);
+          expect(messages[0].location.position).toEqual([[10, 13], [10, 14]]);
         });
       });
     });
