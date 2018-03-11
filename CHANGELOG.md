@@ -1,6 +1,5 @@
 ### Next (Roadmap)
 - Added proper capturing for syntax errors in alternate format.
-alt syntax output format in other file in dir test and code
 
 ### 1.2.2
 - Updated format captures and directory execution for 0.10 compatibility issues.

@@ -120,6 +120,41 @@ describe('The Terraform Validate provider for Linter', () => {
     });
   });
 
+  describe('checks a file with a syntax issue with an alternate format in the directory', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/bad_var_interpolate', 'test_two.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the first message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(1);
+        })
+      );
+    });
+
+    it('verifies the first message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual('error parsing local value "kube_config_static": expected ")" but found opening quote');
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[7, 23], [7, 24]]);
+        });
+      });
+    });
+  });
+
   describe('checks a file with a validate issue in the directory', () => {
     let editor = null;
     const badFile = path.join(__dirname, 'fixtures/unknown_resource', 'test.tf');
