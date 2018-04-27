@@ -1,4 +1,7 @@
 ### Next (Roadmap)
+
+
+### 1.2.3
 - Added proper capturing for syntax errors in alternate format.
 
 ### 1.2.2

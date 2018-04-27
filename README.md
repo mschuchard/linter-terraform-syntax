@@ -3,7 +3,7 @@
 ### Linter-Terraform-Syntax
 [![Build Status](https://travis-ci.org/mschuchard/linter-terraform-syntax.svg?branch=master)](https://travis-ci.org/mschuchard/linter-terraform-syntax)
 
-`Linter-Terraform-Syntax` aims to provide functional and robust `terraform validate/plan` linting functionality within Atom.
+`Linter-Terraform-Syntax` aims to provide functional and robust `terraform validate` and `plan` linting functionality within Atom.
 
 ### Installation
 `Terraform` is required to be installed before using this. The `Linter` and `Language-Terraform` Atom packages are also required.
