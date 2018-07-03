@@ -155,7 +155,7 @@ describe('The Terraform Validate provider for Linter', () => {
     });
   });
 
-  describe('checks a file with a validate issue in the directory', () => {
+  describe('checks a file with an unknown resource in the directory', () => {
     let editor = null;
     const badFile = path.join(__dirname, 'fixtures/unknown_resource', 'test.tf');
     beforeEach(() => {
@@ -183,6 +183,84 @@ describe('The Terraform Validate provider for Linter', () => {
           expect(messages[0].excerpt).toEqual("Non-syntax error in directory: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address.");
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+unknown_resource$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
+        });
+      });
+    });
+  });
+
+  describe('checks a file with a required field missing in the directory', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/required_field', 'test.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the first message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(2);
+        })
+      );
+    });
+
+    it('verifies the first message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual('Non-syntax error in directory: digitalocean_floating_ip.float: "region": required field is not set.');
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+required_field$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
+          expect(messages[1].severity).toBeDefined();
+          expect(messages[1].severity).toEqual('error');
+          expect(messages[1].excerpt).toBeDefined();
+          expect(messages[1].excerpt).toEqual('Non-syntax error in directory: digitalocean_floating_ip.float: droplet_id: cannot parse \'\' as int: strconv.ParseInt: parsing "droplet": invalid syntax.');
+          expect(messages[1].location.file).toBeDefined();
+          expect(messages[1].location.file).toMatch(/.+required_field$/);
+          expect(messages[1].location.position).toBeDefined();
+          expect(messages[1].location.position).toEqual([[0, 0], [0, 1]]);
+        });
+      });
+    });
+  });
+
+  describe('checks a file with an missing file in the directory', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/missing_file', 'test.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the first message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(1);
+        })
+      );
+    });
+
+    it('verifies the first message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual("Non-syntax error in directory: digitalocean_ssh_key.key: file: open /foo/bar/baz: no such file or directory in:.");
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+missing_file$/);
           expect(messages[0].location.position).toBeDefined();
           expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
         });
