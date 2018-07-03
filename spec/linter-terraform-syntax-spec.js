@@ -85,6 +85,41 @@ describe('The Terraform Validate provider for Linter', () => {
     });
   });
 
+  describe('checks a file with a syntax issue with the new format', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/unexpected_paran', 'test.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the first message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(1);
+        })
+      );
+    });
+
+    it('verifies the first message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual('Error reading config for eks: expected "}" but found ")".');
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[0, 28], [1, 29]]);
+        });
+      });
+    });
+  });
+
   describe('checks a file with a syntax issue with an alternate format', () => {
     let editor = null;
     const badFile = path.join(__dirname, 'fixtures/bad_var_interpolate', 'test.tf');
