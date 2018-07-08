@@ -1,5 +1,10 @@
 ### Next (Roadmap)
 
+### 1.2.4
+- Removing deprecation warning parsing since it does not seem to actually exist.
+- Slight output parsing optimization.
+- Adding proper capturing for new syntax error format.
+- Notify when `terraform init` is necessary for solving issues in the directory.
 
 ### 1.2.3
 - Added proper capturing for syntax errors in alternate format.
