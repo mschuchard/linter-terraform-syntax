@@ -28,7 +28,7 @@
   },
   "readmeFilename": "README.md",
   "dependencies": {
-    "atom-linter": "^5.0.2"
+    "atom-linter": "^8.0.0"
   },
   "devDependencies": {
     "eslint": "latest",
