@@ -1,6 +1,7 @@
 ### Next (Roadmap)
 - Added option to exclude `.tf` filenames that match a regexp from linting.
 - Updated `atom-linter` dependency.
+- Catch linting on nonexistent files.
 
 ### 1.2.4
 - Removing deprecation warning parsing since it does not seem to actually exist.
