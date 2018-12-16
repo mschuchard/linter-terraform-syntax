@@ -1,4 +1,6 @@
 ### Next (Roadmap)
+
+### 1.2.5
 - Added option to exclude `.tf` filenames that match a regexp from linting.
 - Updated `atom-linter` dependency.
 - Catch linting on nonexistent files.
