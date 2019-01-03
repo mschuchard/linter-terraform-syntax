@@ -1,4 +1,5 @@
 ### Next (Roadmap)
+- eventually require 0.11 as minimum and remove old regexps
 
 ### 1.2.5
 - Added option to exclude `.tf` filenames that match a regexp from linting.

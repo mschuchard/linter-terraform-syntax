@@ -3,3 +3,4 @@ node_modules
 spec
 linter_terraform_syntax.png
 .git
+.travis.yml
