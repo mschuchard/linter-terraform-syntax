@@ -1,5 +1,10 @@
 ### Next (Roadmap)
-- eventually require 0.11 as minimum and remove old regexps
+- Added option to set global var files for all projects.
+
+eventually require 0.11 as minimum and remove old regexps
+https://github.com/mschuchard/linter-terraform-syntax/issues/13
+only show error for directory once per open file
+"file" not showing for .tf in bisam
 
 ### 1.2.5
 - Added option to exclude `.tf` filenames that match a regexp from linting.

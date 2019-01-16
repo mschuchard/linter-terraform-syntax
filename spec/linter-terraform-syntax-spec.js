@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 
-describe('The Terraform Validate provider for Linter', () => {
+describe('The Terraform provider for Linter', () => {
   const lint = require(path.join(__dirname, '../lib/main.js')).provideLinter().lint;
 
   beforeEach(() => {
@@ -26,7 +26,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -61,7 +61,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -69,7 +69,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -96,7 +96,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -104,7 +104,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -131,7 +131,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -139,7 +139,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -166,7 +166,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -174,7 +174,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -201,7 +201,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -209,7 +209,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -236,7 +236,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(2);
@@ -244,7 +244,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
@@ -279,7 +279,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('finds the first message', () => {
+    it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
           expect(messages.length).toEqual(1);
@@ -287,7 +287,7 @@ describe('The Terraform Validate provider for Linter', () => {
       );
     });
 
-    it('verifies the first message', () => {
+    it('verifies the message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
           expect(messages[0].severity).toBeDefined();
