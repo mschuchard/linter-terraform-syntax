@@ -1,5 +1,6 @@
 ### Next (Roadmap)
 - Added option to set global var files for all projects.
+- Added option to set local var files for each project.
 
 eventually require 0.11 as minimum and remove old regexps
 https://github.com/mschuchard/linter-terraform-syntax/issues/13
