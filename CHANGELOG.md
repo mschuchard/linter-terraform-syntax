@@ -3,9 +3,10 @@
 - Added option to set local var files for each project.
 
 eventually require 0.11 as minimum and remove old regexps
-https://github.com/mschuchard/linter-terraform-syntax/issues/13
 only show error for directory once per open file
 "file" not showing for .tf in bisam
+option to ignore "required variable not set" unless module block in current file
+why are displayed errors being cached in linter display until i reload
 
 ### 1.2.5
 - Added option to exclude `.tf` filenames that match a regexp from linting.
