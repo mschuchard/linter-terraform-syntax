@@ -2,12 +2,12 @@
 - Added option to set global var files for all projects.
 - Added option to set local var files for each project.
 - Added option to ignore 'required variable not set' error.
+- Improve ability to recognize necessary `terraform init`.
 
 eventually require 0.11 as minimum and remove old regexps
 only show error for directory once per open file
 "file" not showing for .tf in bisam or in module declare dir, but clearly being used in cwd else it would be failing
 why are displayed errors being cached in linter display until i reload
-ignore unset var error is ignoring all errors of that type (regex check not working in conditional)
 
 ### 1.2.5
 - Added option to exclude `.tf` filenames that match a regexp from linting.
