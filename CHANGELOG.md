@@ -1,3 +1,11 @@
+### 1.3.0 (Roadmap)
+- Remove specific check for `terraform init` prerequisite.
+
+remove tf init stuff since error msg is good enough anyway
+require 0.11 as minimum and remove old regexps
+only show error for directory once per open file
+why are displayed errors being cached in linter display until i reload
+
 ### 1.2.6
 - Added option to set global var files for all projects.
 - Added option to set local var files for each project.
