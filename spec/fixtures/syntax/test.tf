@@ -1,6 +1,4 @@
-# <0.10: Validate error in format of:
-# Error loading files Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 11:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
-# 0.10: Validate error in format of:
+# Validate error in format of:
 # Error: Error parsing /home/matt/git_repos/linter-terraform-syntax/spec/fixtures/syntax/test.tf: At 11:14: expected: IDENT | STRING | ASSIGN | LBRACE got: SUB
 
 # Plan error in format of:

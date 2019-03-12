@@ -1,17 +1,7 @@
-# <0.10: Validate error in format of:
-# Error validating: 1 error(s) occurred:
-#
-# * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
-# 0.10: Validate error in format of:
+# Validate error in format of:
 # Error: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
 
-# <0.10: Plan error in format of:
-# 1 error(s) occurred:
-#
-# * module root: 1 error(s) occurred:
-#
-# * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
-# 0.10: Plan error in format of:
+# Plan error in format of:
 # Error: module root: 1 error(s) occurred:
 #
 # * resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
