@@ -1,5 +1,7 @@
 ### 1.3.0 (Roadmap)
 - Remove specific check for `terraform init` prerequisite.
+- Establish 0.11 as minimum version of terraform.
+- Fix check on linting nonexistent files.
 
 remove old regexps and other <0.11 stuff
 only show error for directory once per open file
