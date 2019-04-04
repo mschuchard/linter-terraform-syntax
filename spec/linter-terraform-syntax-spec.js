@@ -268,7 +268,7 @@ describe('The Terraform provider for Linter', () => {
     });
   });
 
-  describe('checks a file with an missing file in the directory', () => {
+  describe('checks a file with a missing file in the directory', () => {
     let editor = null;
     const badFile = path.join(__dirname, 'fixtures/missing_file', 'test.tf');
     beforeEach(() => {
