@@ -4,7 +4,7 @@
 - Fix check on linting nonexistent files.
 
 remove old regexps (cannot seem to safely) and other <0.11 stuff
-require dirname is not a function so cannot catch
+spec test now cannot load terraform package
 only show error for directory once per open file
 why are displayed errors being cached in linter display sometimes until i reload
 
