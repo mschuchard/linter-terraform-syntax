@@ -4,7 +4,7 @@
 - remove old regexps (cannot seem to safely) and other <0.11 stuff
 - only show error for directory once per open file
 - why are displayed errors being cached in linter display sometimes until i reload
-- 0.12 has a real different format; also it now provides file name information; it also has additional info provided; line is provided twice (and now is also provided for dir errors) and now column is a range (but still not provided for dir errors); var inputs are gone from validate
+- read and parse 0.12 validate output; conditional off other situation for regexp matching and display
 
 ### 1.3.0
 - Remove specific check for `terraform init` prerequisite.
