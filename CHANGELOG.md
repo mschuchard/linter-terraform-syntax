@@ -1,10 +1,5 @@
-### 1.3.1 (Roadmap)
+### 1.3.1
 - Add Beta support for Terraform >= 0.12.
-
-- remove old regexps (cannot seem to safely) and other <0.11 stuff
-- only show error for directory once per open file
-- why are displayed errors being cached in linter display sometimes until i reload (fix with project scope?)
-- auto detect terraform 0.12 and config set later (not opt-in)
 
 ### 1.3.0
 - Remove specific check for `terraform init` prerequisite.
