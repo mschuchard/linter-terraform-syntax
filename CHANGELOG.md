@@ -1,3 +1,10 @@
+### 1.4.0 (Roadmap)
+- Update linter scope to project level.
+
+- full >= 0.12 support
+- remove old regexps (cannot seem to safely) and other <0.11 stuff
+- auto detect terraform 0.12 and config set later (not opt-in)
+
 ### 1.3.1
 - Add Beta support for Terraform >= 0.12.
 
