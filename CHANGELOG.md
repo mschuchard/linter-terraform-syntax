@@ -1,8 +1,9 @@
 ### 1.4.0 (Roadmap)
 - Update linter scope to project level.
-- Full 0.12 support and auto-detect.
+- Full 0.12 support and auto-detection.
 
-- remove old regexps (cannot seem to safely) and other <0.11 stuff
+- cwd: dir seems to have broken for no reason (newer version of atom broke sb-exec maybe)
+- 0.12 in ci matrix triggers correct config switch in time for json.parse, but not in time for -json arg
 
 ### 1.3.1
 - Add Beta support for Terraform >= 0.12.
