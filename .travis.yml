@@ -1,6 +1,5 @@
 # setup environment
 dist: xenial
-sudo: true
 language: go
 
 notifications:
@@ -20,7 +19,7 @@ matrix:
   - os: linux
     env: VERSION='0.11.14'
   - os: linux
-    env: VERSION='0.12.9'
+    env: VERSION='0.12.13'
   - os: linux
     env: ATOM_CHANNEL=beta VERSION='0.11.14'
 

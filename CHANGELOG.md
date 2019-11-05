@@ -1,5 +1,5 @@
 ### 1.4.1 (Roadmap)
-- 0.12 in ci matrix triggers correct config switch in time for json.parse, but not in time for -json arg
+- 0.12 in ci matrix not generating json for no good reason
 
 ### 1.4.0
 - Update linter scope to project level.
