@@ -1,4 +1,6 @@
 ### 1.4.1 (Roadmap)
+- Add `timeout` option to config settings.
+
 - 0.12 in ci matrix not generating json for no good reason
 
 ### 1.4.0
