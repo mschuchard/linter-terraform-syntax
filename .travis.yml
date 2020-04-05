@@ -1,6 +1,10 @@
 # setup environment
-dist: xenial
+dist: bionic
 language: go
+
+branches:
+  only:
+  - master
 
 notifications:
   email: false
@@ -19,9 +23,9 @@ matrix:
   - os: linux
     env: VERSION='0.11.14'
   - os: linux
-    env: VERSION='0.12.13'
+    env: VERSION='0.12.24'
   - os: linux
-    env: ATOM_CHANNEL=beta VERSION='0.11.14'
+    env: ATOM_CHANNEL=beta VERSION='0.12.24'
 
 # execute tests
 install:
