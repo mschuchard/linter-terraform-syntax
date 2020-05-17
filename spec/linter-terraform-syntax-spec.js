@@ -303,6 +303,41 @@ describe('The Terraform provider for Linter', () => {
     });
   });
 
+  describe('checks a file with warnings in the directory', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/warnings', 'test.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(3);
+        })
+      );
+    });
+
+    it('verifies the message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('warning');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual('Interpolation-only expressions are deprecated');
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+warnings$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
+        });
+      });
+    });
+  });
+
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() => {
       const goodFile = path.join(__dirname, 'fixtures/clean', 'test.tf');

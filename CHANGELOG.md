@@ -1,3 +1,8 @@
+### 1.5.0 (Roadmap)
+- 0.12 in ci matrix not generating json for no good reason
+- check dir path bug vs. file path bug circumvention vis a vis shared code and logic
+- eventually drop 0.11 support (update tests and fixtures; remove version detection; remove support for alternative formats; remove regexps; remove outdated config options; other)
+
 ### 1.4.1
 - Add `timeout` option to config settings.
 - Circumvent atom-linter displaying only a file in the issue path for Terraform 0.12.
