@@ -4,6 +4,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "AMI"
+  ami           = var.ami
   instance_type = "t2.micro"
 }
+
+variable "ami" {}
