@@ -2,7 +2,7 @@
 - Add config setting to only auto-format the currently opened file.
 
 - 0.12 in ci matrix not generating json for no good reason
-- eventually drop 0.11 support (update tests and fixtures; remove version detection; remove support for alternative formats; remove regexps; remove outdated config options; other)
+- eventually drop 0.11 support (update tests and fixtures; remove support for alternative formats; remove regexps; remove outdated config options and adapt var file for plan; other)
 
 ### 1.4.1
 - Add `timeout` option to config settings.
