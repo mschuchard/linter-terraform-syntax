@@ -21,11 +21,9 @@ env:
 matrix:
   include:
   - os: linux
-    env: VERSION='0.11.14'
+    env: VERSION='0.12.26'
   - os: linux
-    env: VERSION='0.12.24'
-  - os: linux
-    env: ATOM_CHANNEL=beta VERSION='0.12.24'
+    env: ATOM_CHANNEL=beta VERSION='0.12.26'
 
 # execute tests
 install:
