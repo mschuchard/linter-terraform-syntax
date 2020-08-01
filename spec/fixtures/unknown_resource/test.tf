@@ -1,6 +1,3 @@
-# Validate error in format of:
-# Error: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address
-
 # Plan error in format of:
 # Error: module root: 1 error(s) occurred:
 #
@@ -12,5 +9,5 @@ provider "digitalocean" {
 
 resource "digitalocean_domain" "domain" {
   name       = "www.example.com"
-  ip_address = "${digitalocean_droplet.droplet.ipv4_address}"
+  ip_address = digitalocean_droplet.droplet.ipv4_address
 }
