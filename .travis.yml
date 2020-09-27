@@ -23,7 +23,7 @@ matrix:
   - os: linux
     env: VERSION='0.12.29'
   - os: linux
-    env: VERSION='0.13.0'
+    env: VERSION='0.13.2'
 
 # execute tests
 install:

@@ -1,3 +1,3 @@
 module "eks" {
-  subnets = module.vpc.private_subnets
+  subnets = module.vpc.private_subnets)
 }

@@ -2,8 +2,6 @@
 - Add config setting to only auto-format the currently opened file.
 - Minimum supported version now 0.12.
 
-- 0.12 in ci matrix not generating json for no good reason
-
 ### 1.4.1
 - Add `timeout` option to config settings.
 - Circumvent atom-linter displaying only a file in the issue path for Terraform 0.12.
