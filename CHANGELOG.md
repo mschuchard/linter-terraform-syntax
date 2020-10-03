@@ -1,4 +1,4 @@
-### 1.5.0 (Roadmap)
+### 1.5.0
 - Add config setting to only auto-format the currently opened file.
 - Minimum supported version now 0.12.
 
