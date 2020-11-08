@@ -40,7 +40,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
+          expect(messages[0].excerpt).toEqual("Argument or block definition required");
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -75,7 +75,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("expected: IDENT | STRING | ASSIGN | LBRACE got: SUB");
+          expect(messages[0].excerpt).toEqual("Argument or block definition required");
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -99,7 +99,7 @@ describe('The Terraform provider for Linter', () => {
     it('finds the message', () => {
       waitsForPromise(() =>
         lint(editor).then(messages => {
-          expect(messages.length).toEqual(1);
+          expect(messages.length).toEqual(3);
         })
       );
     });
@@ -110,19 +110,27 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('Missing required argument');
+          expect(messages[0].excerpt).toEqual('Module not installed');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[0, 13], [0, 14]]);
+          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
           expect(messages[1].severity).toBeDefined();
           expect(messages[1].severity).toEqual('error');
           expect(messages[1].excerpt).toBeDefined();
-          expect(messages[1].excerpt).toEqual('Missing newline after argument');
+          expect(messages[1].excerpt).toEqual('Missing required argument');
           expect(messages[1].location.file).toBeDefined();
           expect(messages[1].location.file).toMatch(/.+test\.tf$/);
           expect(messages[1].location.position).toBeDefined();
-          expect(messages[1].location.position).toEqual([[1, 38], [1, 39]]);
+          expect(messages[1].location.position).toEqual([[0, 13], [0, 14]]);
+          expect(messages[2].severity).toBeDefined();
+          expect(messages[2].severity).toEqual('error');
+          expect(messages[2].excerpt).toBeDefined();
+          expect(messages[2].excerpt).toEqual('Missing newline after argument');
+          expect(messages[2].location.file).toBeDefined();
+          expect(messages[2].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[2].location.position).toBeDefined();
+          expect(messages[2].location.position).toEqual([[1, 38], [1, 40]]);
         });
       });
     });
@@ -153,7 +161,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('error parsing local value "kube_config_static": expected ")" but found opening quote');
+          expect(messages[0].excerpt).toEqual('Missing argument separator');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -192,7 +200,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[8, 23], [8, 24]]);
+          expect(messages[0].location.position).toEqual([[8, 6], [8, 8]]);
         });
       });
     });
