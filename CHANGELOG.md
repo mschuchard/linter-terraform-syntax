@@ -1,3 +1,6 @@
+### Next (Roadmap)
+- Remove description and replace summary in excerpt with details.
+
 ### 1.5.0
 - Add config setting to only auto-format the currently opened file.
 - Minimum supported version now 0.12.
