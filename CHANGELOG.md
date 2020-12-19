@@ -1,5 +1,8 @@
 ### Next (Roadmap)
 - Remove description and replace summary in excerpt with details.
+- Backup to validate summary if detail is null.
+
+issue 22 use cwd in formatting
 
 ### 1.5.0
 - Add config setting to only auto-format the currently opened file.
