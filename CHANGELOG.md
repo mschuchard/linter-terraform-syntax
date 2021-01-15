@@ -1,3 +1,8 @@
+### 1.6.0 (Roadmap)
+- Add config option for recursive auto-formatting.
+
+- drop support for plan
+
 ### 1.5.1
 - Remove description and replace summary in excerpt with details.
 - Backup to validate summary if detail is null.
