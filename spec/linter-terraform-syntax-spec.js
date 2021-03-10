@@ -40,7 +40,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("Argument or block definition required");
+          expect(messages[0].excerpt).toEqual('An argument or block definition is required here. To set an argument, use the equals sign "=" to introduce the argument value.');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -75,7 +75,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("Argument or block definition required");
+          expect(messages[0].excerpt).toEqual('An argument or block definition is required here. To set an argument, use the equals sign "=" to introduce the argument value.');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -161,7 +161,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('Missing argument separator');
+          expect(messages[0].excerpt).toEqual('A comma is required to separate each function argument from the next.');
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
@@ -344,7 +344,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('warning');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual('Interpolation-only expressions are deprecated');
+          expect(messages[0].excerpt).toMatch(/Terraform 0\.11 and earlier/);
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+warnings$/);
           expect(messages[0].location.position).toBeDefined();
