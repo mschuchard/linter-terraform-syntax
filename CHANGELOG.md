@@ -1,4 +1,4 @@
-### 1.6.0 (Roadmap)
+### 1.6.0
 - Add config option for recursive auto-formatting.
 - Drop support for `plan`.
 

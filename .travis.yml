@@ -15,8 +15,8 @@ git:
 # setup tests
 env:
   global:
-    - APM_TEST_PACKAGES="language-terraform"
-    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+  - APM_TEST_PACKAGES="language-terraform"
+  - ATOM_LINT_WITH_BUNDLED_NODE="true"
 
 matrix:
   include:
@@ -25,7 +25,7 @@ matrix:
   - os: linux
     env: VERSION='0.13.5'
   - os: linux
-    env: VERSION='0.14.7'
+    env: VERSION='0.14.9'
 
 # execute tests
 install:
