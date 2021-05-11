@@ -22,14 +22,14 @@ os: linux
 
 matrix:
   include:
-  - env: VERSION='0.12.30'
-  - env: VERSION='0.13.6'
-  - env: VERSION='0.14.10'
-  - env: VERSION='0.15.0-rc2'
+  - env: VERSION='0.12.31'
+  - env: VERSION='0.13.7'
+  - env: VERSION='0.14.11'
+  - env: VERSION='0.15.3'
 
 # execute tests
 install:
-  - sudo wget https://releases.hashicorp.com/terraform/$VERSION/terraform_"$VERSION"_linux_amd64.zip
-  - sudo unzip terraform_"$VERSION"_linux_amd64.zip -d /usr/bin/
+  - sudo wget "https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip"
+  - sudo unzip "terraform_${VERSION}_linux_amd64.zip" -d /usr/bin/
 before_script: terraform version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
