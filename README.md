@@ -1,7 +1,7 @@
 ![Preview](https://raw.githubusercontent.com/mschuchard/linter-terraform-syntax/master/linter_terraform_syntax.png)
 
 ### Linter-Terraform-Syntax
-[![Build Status](https://travis-ci.org/mschuchard/linter-terraform-syntax.svg?branch=master)](https://travis-ci.org/mschuchard/linter-terraform-syntax)
+[![Build Status](https://travis-ci.com/mschuchard/linter-terraform-syntax.svg?branch=master)](https://travis-ci.com/mschuchard/linter-terraform-syntax)
 
 Linter-Terraform-Syntax aims to provide functional and robust `terraform validate` linting and `fmt` formatting functionality within Atom.
 
