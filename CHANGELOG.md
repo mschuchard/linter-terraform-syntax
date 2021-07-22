@@ -1,3 +1,6 @@
+### 1.6.1 (Next)
+- 1.7 change formatting config to object type and group together
+
 ### 1.6.0
 - Add config option for recursive auto-formatting.
 - Drop support for `plan`.
