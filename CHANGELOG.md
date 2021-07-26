@@ -1,4 +1,6 @@
 ### 1.6.1 (Next)
+- Update displayed information for File to be platform independent.
+
 - 1.7 change formatting config to object type and group together
 
 ### 1.6.0
