@@ -1,3 +1,6 @@
+### (Next)
+- Updates to Linter API usage.
+
 ### 1.6.1 (Next)
 - Update displayed information for File to be platform independent.
 
