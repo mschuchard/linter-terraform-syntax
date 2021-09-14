@@ -4,7 +4,6 @@
 - Fix inaccurate location position regression.
 
 - 1.7 change formatting config to object type and group together
-- need similar non project pathing fix as linter-ansible-lint?
 
 ### 1.6.0
 - Add config option for recursive auto-formatting.
