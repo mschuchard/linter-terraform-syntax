@@ -1,9 +1,9 @@
 ### 1.6.1 (Next)
 - Update displayed information for File to be platform independent.
 - Updates to Linter API usage.
+- Fix inaccurate location position regression.
 
 - 1.7 change formatting config to object type and group together
-line col line col
 - need similar non project pathing fix as linter-ansible-lint?
 
 ### 1.6.0
