@@ -1,10 +1,10 @@
-### (Next)
-- Updates to Linter API usage.
-
 ### 1.6.1 (Next)
 - Update displayed information for File to be platform independent.
+- Updates to Linter API usage.
 
 - 1.7 change formatting config to object type and group together
+line col line col
+- need similar non project pathing fix as linter-ansible-lint?
 
 ### 1.6.0
 - Add config option for recursive auto-formatting.
