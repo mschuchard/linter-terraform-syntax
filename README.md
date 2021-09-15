@@ -10,4 +10,4 @@ Terraform >= 0.12 is required to be installed before using this (downgrade to 1.
 
 ### Usage
 - To quickly and easily access issues in other files, you will need to change the settings inside Linter-UI-Default. For `Panel Represents` and/or `Statusbar Represents`, you will need to change their options to `Entire Project`. This will allow you to use either display to quickly access issues in other files by clicking on the displayed information. Note this will not work on directory issues since a directory cannot be opened in a pane.
-- Support for linting with `plan` was dropped in version 1.6.0. Please downgrade to 1.5.1 if you wish to continue linting with `plan`.
+- Support for linting with `plan` was removed in version 1.6.0. Please downgrade to 1.5.1 if you wish to continue linting with `plan`.

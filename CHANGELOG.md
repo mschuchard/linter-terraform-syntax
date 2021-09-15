@@ -1,9 +1,7 @@
-### 1.6.1 (Next)
+### 1.6.1
 - Update displayed information for File to be platform independent.
 - Updates to Linter API usage.
 - Fix inaccurate location position regression.
-
-- 1.7 change formatting config to object type and group together
 
 ### 1.6.0
 - Add config option for recursive auto-formatting.

@@ -1,8 +1,8 @@
 {
   "name": "linter-terraform-syntax",
   "main": "./lib/main.js",
-  "version": "1.6.0",
-  "description": "Terraform lint via validate or plan and format via fmt",
+  "version": "1.6.1",
+  "description": "Terraform lint via validate and format via fmt",
   "repository": "https://github.com/mschuchard/linter-terraform-syntax",
   "license": "MIT",
   "keywords": [
