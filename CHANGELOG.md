@@ -1,3 +1,6 @@
+### 1.7.0 (Next)
+- Refactor auto formatting config options.
+
 ### 1.6.1
 - Update displayed information for File to be platform independent.
 - Updates to Linter API usage.
