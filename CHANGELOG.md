@@ -1,5 +1,6 @@
-### 1.7.0 (Next)
+### 1.6.2 (Next)
 - Refactor auto formatting config options.
+- Support deprecation for Terraform 0.12.
 
 ### 1.6.1
 - Update displayed information for File to be platform independent.

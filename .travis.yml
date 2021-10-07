@@ -22,11 +22,10 @@ os: linux
 
 matrix:
   include:
-  - env: VERSION='0.12.31'
   - env: VERSION='0.13.7'
   - env: VERSION='0.14.11'
   - env: VERSION='0.15.5'
-  - env: VERSION='1.0.6'
+  - env: VERSION='1.0.8'
 
 # execute tests
 install:
