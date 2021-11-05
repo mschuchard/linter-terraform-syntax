@@ -1,6 +1,7 @@
 ### 1.6.2 (Next)
 - Refactor auto formatting config options.
 - Support deprecation for Terraform 0.12.
+- Fix missing detail conditional from `null` to empty string.
 
 ### 1.6.1
 - Update displayed information for File to be platform independent.
