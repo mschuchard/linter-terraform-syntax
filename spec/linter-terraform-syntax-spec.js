@@ -241,6 +241,41 @@ describe('The Terraform provider for Linter', () => {
     });
   });
 
+  describe('checks a file with a syntax error with no detail diganostic value', () => {
+    let editor = null;
+    const badFile = path.join(__dirname, 'fixtures/detail_empty', 'test.tf');
+    beforeEach(() => {
+      waitsForPromise(() =>
+        atom.workspace.open(badFile).then(openEditor => {
+          editor = openEditor;
+        })
+      );
+    });
+
+    it('finds the message', () => {
+      waitsForPromise(() =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(1);
+        })
+      );
+    });
+
+    it('verifies the message', () => {
+      waitsForPromise(() => {
+        return lint(editor).then(messages => {
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual('"name" may only contain alphanumeric characters, dash, underscores, parentheses and periods');
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[1, 9], [1, 10]]);
+        });
+      });
+    });
+  });
+
   describe('checks a file with a required field missing in the directory', () => {
     let editor = null;
     const badFile = path.join(__dirname, 'fixtures/required_field', 'test.tf');
