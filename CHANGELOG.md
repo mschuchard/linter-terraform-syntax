@@ -1,4 +1,4 @@
-### 1.6.2 (Next)
+### 1.6.2
 - Refactor auto formatting config options.
 - Support deprecation for Terraform 0.12.
 - Fix missing detail conditional from `null` to empty string.
