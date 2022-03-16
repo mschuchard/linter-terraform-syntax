@@ -1,0 +1,51 @@
+---
+version: 2.1
+
+jobs:
+  test:
+    parameters:
+      tf-version:
+        type: string
+    environment:
+      DISPLAY: ':99'
+      APM_TEST_PACKAGES: 'language-terraform'
+    working_directory: /tmp/project
+    docker:
+    - image: circleci/node:latest
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - linter-terraform-syntax
+    - run:
+        name: install some pre-requisite packages
+        command: sudo apt-get update && sudo apt-get -yq install curl xvfb libgbm-dev unzip
+    - run:
+        name: install terraform
+        command: curl -o terraform.zip https://releases.hashicorp.com/terraform/<< parameters.tf-version >>/terraform_<< parameters.tf-version >>_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
+    - run:
+        name: start display server for Atom
+        command: /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1024x768x16 +extension RANDR
+        background: true
+    - run:
+        name: run package tests
+        command: curl -s https://raw.githubusercontent.com/mschuchard/vagrant-boxes-docker-images/master/atom-build-package.sh | sh
+    - save_cache:
+        paths:
+        - node_modules
+        - ~/.atom/packages
+        # ideally also apt when that is supported
+        key: linter-terraform-syntax
+
+workflows:
+  execute_tests:
+    jobs:
+    - test:
+        matrix:
+          parameters:
+            tf-version:
+            - '0.13.7'
+            - '0.14.11'
+            - '0.15.5'
+            - '1.0.11'
+            - '1.1.7'
