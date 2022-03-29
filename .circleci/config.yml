@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   test:
     parameters:
-      tf-version:
+      tf_version:
         type: string
     environment:
       DISPLAY: ':99'
@@ -22,7 +22,7 @@ jobs:
         command: sudo apt-get update && sudo apt-get -yq install curl xvfb libgbm-dev unzip
     - run:
         name: install terraform
-        command: curl -o terraform.zip https://releases.hashicorp.com/terraform/<< parameters.tf-version >>/terraform_<< parameters.tf-version >>_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
+        command: curl -o terraform.zip https://releases.hashicorp.com/terraform/<< parameters.tf_version >>/terraform_<< parameters.tf_version >>_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
     - run:
         name: start display server for Atom
         command: /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1024x768x16 +extension RANDR
@@ -43,7 +43,7 @@ workflows:
     - test:
         matrix:
           parameters:
-            tf-version:
+            tf_version:
             - '0.13.7'
             - '0.14.11'
             - '0.15.5'

@@ -40,7 +40,7 @@ jobs:
       run: ./node_modules/.bin/eslint lib spec || true
     - name: install some pre-requisite packages
       run: sudo apt-get update && sudo apt-get -yq install curl xvfb libgbm-dev
-    - name: install vault cli
-      run: curl -o terraform.zip https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
+    - name: install terraform
+      run: curl -o terraform.zip https://releases.hashicorp.com/terraform/${{ matrix.tf_version }}/terraform_${{ matrix.tf_version }}_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
     - name: run tests
       run: atom --test spec
