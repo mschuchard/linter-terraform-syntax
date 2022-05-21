@@ -18,11 +18,11 @@ jobs:
         os: [ubuntu-latest]
         channel: [stable]
         tf_version:
-        - '0.13.7'
         - '0.14.11'
         - '0.15.5'
         - '1.0.11'
-        - '1.1.7'
+        - '1.1.9'
+        - '1.2.0'
     runs-on: ${{ matrix.os }}
     steps:
     - name: checkout

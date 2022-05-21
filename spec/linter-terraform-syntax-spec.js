@@ -122,7 +122,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[1].location.file).toBeDefined();
           expect(messages[1].location.file).toMatch(/.+test\.tf$/);
           expect(messages[1].location.position).toBeDefined();
-          expect(messages[1].location.position).toEqual([[0, 13], [0, 14]]);
+          expect(messages[1].location.position).toEqual([[0, 13], [0, 15]]);
         });
       });
     });
