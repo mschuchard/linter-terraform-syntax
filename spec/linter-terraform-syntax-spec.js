@@ -42,9 +42,9 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('An argument or block definition is required here. To set an argument, use the equals sign "=" to introduce the argument value.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+syntax\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[5, 2], [5, 9]]);
+          expect(messages[0].location.position).toEqual([[3, 2], [3, 9]]);
         });
       });
     });
@@ -77,9 +77,9 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('An argument or block definition is required here. To set an argument, use the equals sign "=" to introduce the argument value.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+syntax\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[5, 2], [5, 9]]);
+          expect(messages[0].location.position).toEqual([[3, 2], [3, 9]]);
         });
       });
     });
@@ -112,7 +112,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('An argument definition must end with a newline.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+unexpected_paran\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
           expect(messages[0].location.position).toEqual([[1, 38], [1, 40]]);
           expect(messages[1].severity).toBeDefined();
@@ -120,7 +120,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[1].excerpt).toBeDefined();
           expect(messages[1].excerpt).toEqual('The argument "source" is required, but no definition was found.');
           expect(messages[1].location.file).toBeDefined();
-          expect(messages[1].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[1].location.file).toMatch(/.+unexpected_paran\/test\.tf$/);
           expect(messages[1].location.position).toBeDefined();
           expect(messages[1].location.position).toEqual([[0, 13], [0, 15]]);
         });
@@ -155,9 +155,9 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('A comma is required to separate each function argument from the next.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+bad_var_interpolate\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[8, 6], [8, 8]]);
+          expect(messages[0].location.position).toEqual([[5, 6], [5, 8]]);
         });
       });
     });
@@ -190,9 +190,9 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('A comma is required to separate each function argument from the next.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+bad_var_interpolate\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[8, 6], [8, 8]]);
+          expect(messages[0].location.position).toEqual([[5, 6], [5, 8]]);
         });
       });
     });
@@ -260,7 +260,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toEqual('"name" may only contain alphanumeric characters, dash, underscores, parentheses and periods');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+test\.tf$/);
+          expect(messages[0].location.file).toMatch(/.+detail_empty\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
           expect(messages[0].location.position).toEqual([[1, 9], [1, 10]]);
         });
@@ -336,11 +336,11 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("Non-syntax error in directory: digitalocean_ssh_key.key: file: open /foo/bar/baz: no such file or directory in:.");
+          expect(messages[0].excerpt).toEqual('Invalid value for "path" parameter: no file exists at "/foo/bar/baz"; this function works only with files that are distributed as part of the configuration source code, so if this file will be created by a resource in this configuration you must instead obtain this result from an attribute of that resource.');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+missing_file$/);
+          expect(messages[0].location.file).toMatch(/.+missing_file\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
+          expect(messages[0].location.position).toEqual([[1, 21], [1, 34]]);
         });
       });
     });
@@ -373,7 +373,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].excerpt).toBeDefined();
           expect(messages[0].excerpt).toMatch(/Terraform 0\.11 and earlier/);
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+warnings$/);
+          expect(messages[0].location.file).toMatch(/.+warnings\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
           expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
         });
