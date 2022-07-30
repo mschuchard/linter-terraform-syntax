@@ -1,3 +1,6 @@
+### (Next)
+- update fixtures to provider-less where possible
+
 ### 1.6.2
 - Refactor auto formatting config options.
 - Support deprecation for Terraform 0.12.

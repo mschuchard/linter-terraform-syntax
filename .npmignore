@@ -4,3 +4,5 @@ spec
 linter_terraform_syntax.png
 .git
 .travis.yml
+.circleci
+.github
