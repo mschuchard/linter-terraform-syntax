@@ -1,5 +1,5 @@
 # setup environment
-dist: focal
+dist: jammy
 language: go
 
 branches:
@@ -26,7 +26,7 @@ matrix:
   - env: VERSION='1.0.11'
   - env: VERSION='1.1.9'
   - env: VERSION='1.2.9'
-  - env: VERSION='1.3.0'
+  - env: VERSION='1.3.6'
 
 # execute tests
 install:
