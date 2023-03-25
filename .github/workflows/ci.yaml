@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04]
-        channel: [stable]
+        channel: [beta]
         tf_version:
         - '0.15.5'
         - '1.0.11'
@@ -30,8 +30,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: checkout
-      uses: actions/checkout@v2
-    - uses: UziTech/action-setup-atom@v2
+      uses: actions/checkout@v3
+    - uses: UziTech/action-setup-atom@v3
       with:
         version: ${{ matrix.channel }}
     - name: atom version
