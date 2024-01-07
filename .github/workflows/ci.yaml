@@ -11,38 +11,14 @@ on:
     paths:
     - '**.js'
 
-env:
-  CI: true
-  PACKAGES: 'language-terraform'
-
 jobs:
-  lint-and-test:
-    strategy:
-      matrix:
-        os: [ubuntu-22.04]
-        channel: [beta]
-        tf_version:
-        - '0.15.5'
-        - '1.0.11'
-        - '1.1.9'
-        - '1.2.9'
-        - '1.3.6'
-    runs-on: ${{ matrix.os }}
+  lint:
+    runs-on: ubuntu-22.04
+    container: node:14-alpine
     steps:
     - name: checkout
       uses: actions/checkout@v3
-    - uses: UziTech/action-setup-atom@v3
-      with:
-        version: ${{ matrix.channel }}
-    - name: atom version
-      run: atom -v
-    - name: apm version
-      run: apm -v
     - name: install dependencies
-      run: apm install && apm install ${PACKAGES} && apm clean
+      run: npm install
     - name: lint source and spec
       run: ./node_modules/.bin/eslint lib spec || true
-    - name: install terraform
-      run: curl -o terraform.zip https://releases.hashicorp.com/terraform/${{ matrix.tf_version }}/terraform_${{ matrix.tf_version }}_linux_amd64.zip && sudo unzip terraform.zip -d /usr/bin/
-    - name: run tests
-      run: atom --test spec
