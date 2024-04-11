@@ -6,7 +6,7 @@ Linter-Terraform-Syntax aims to provide functional and robust `terraform validat
 This package is now in maintenance mode. All feature requests and bug reports in the Github repository issue tracker will receive a response, and possibly also be implemented (especially bug fixes). However, active development on this package has ceased.
 
 ### Installation
-Terraform >= 0.12 is required to be installed (five most recent minor versions are officially supported; check CI matrix) before using this (downgrade to 1.4.1 for 0.11 support). The Atom-IDE-UI and Language-Terraform packages are also required.
+Terraform >= 0.12 is required to be installed (>= 1.0 is officially supported) before using this (downgrade to 1.4.1 for 0.11 support). The Atom-IDE-UI and Language-Terraform packages are also required.
 
 All testing is performed with the latest stable version of Pulsar. Any version of Atom or any pre-release version of Pulsar is not supported.
 

@@ -11,13 +11,13 @@
     "terraform"
   ],
   "scripts": {
-    "test": "atom --test spec"
+    "test": "pulsar --test spec"
   },
   "bugs": {
     "url": "https://github.com/mschuchard/linter-terraform-syntax/issues"
   },
   "engines": {
-    "atom": ">0.95.0"
+    "pulsar": ">=1.0.0"
   },
   "providedServices": {
     "linter": {
@@ -42,7 +42,7 @@
         "error",
         {
           "ignore": [
-            "atom"
+            "pulsar"
           ]
         }
       ]
@@ -52,7 +52,7 @@
       "node": true
     },
     "globals": {
-      "atom": false
+      "pulsar": false
     }
   }
 }
