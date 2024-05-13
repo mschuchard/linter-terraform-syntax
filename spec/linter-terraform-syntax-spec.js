@@ -44,7 +44,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+syntax\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[3, 2], [3, 9]]);
+          expect(messages[0].location.position).toEqual([[1, 2], [1, 6]]);
         });
       });
     });
@@ -79,7 +79,7 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].location.file).toBeDefined();
           expect(messages[0].location.file).toMatch(/.+syntax\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[3, 2], [3, 9]]);
+          expect(messages[0].location.position).toEqual([[1, 2], [1, 6]]);
         });
       });
     });
@@ -223,11 +223,11 @@ describe('The Terraform provider for Linter', () => {
           expect(messages[0].severity).toBeDefined();
           expect(messages[0].severity).toEqual('error');
           expect(messages[0].excerpt).toBeDefined();
-          expect(messages[0].excerpt).toEqual("Non-syntax error in directory: resource 'digitalocean_domain.domain' config: unknown resource 'digitalocean_droplet.droplet' referenced in variable digitalocean_droplet.droplet.ipv4_address.");
+          expect(messages[0].excerpt).toEqual('The provider terraform.io/builtin/terraform does not support resource type "terraform_not_data".');
           expect(messages[0].location.file).toBeDefined();
-          expect(messages[0].location.file).toMatch(/.+unknown_resource$/);
+          expect(messages[0].location.file).toMatch(/.+unknown_resource\/test\.tf$/);
           expect(messages[0].location.position).toBeDefined();
-          expect(messages[0].location.position).toEqual([[0, 0], [0, 1]]);
+          expect(messages[0].location.position).toEqual([[0, 9], [0, 30]]);
         });
       });
     });
