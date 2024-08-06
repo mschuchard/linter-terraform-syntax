@@ -1,4 +1,5 @@
-### (Next)
+### 1.6.3 (Next)
+- Warn on automatic formatting errors returned for non-config Terraform files.
 
 ### 1.6.2
 - Refactor auto formatting config options.
