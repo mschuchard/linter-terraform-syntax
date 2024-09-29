@@ -1,5 +1,8 @@
 ### 1.6.3 (Next)
 - Warn on automatic formatting errors returned for non-config Terraform files.
+improve warn to only display non-config file issues?
+improve warn to only trigger when all issues derive from only non-config files?
+line/col parseint?
 
 ### 1.6.2
 - Refactor auto formatting config options.
