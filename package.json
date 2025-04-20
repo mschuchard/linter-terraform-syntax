@@ -31,7 +31,7 @@
     "atom-linter": "^10.0.0"
   },
   "devDependencies": {
-    "eslint": "latest",
+    "eslint": "^8.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest"
   },
@@ -42,7 +42,7 @@
         "error",
         {
           "ignore": [
-            "pulsar"
+            "atom"
           ]
         }
       ]
@@ -52,7 +52,7 @@
       "node": true
     },
     "globals": {
-      "pulsar": false
+      "atom": true
     }
   }
 }
