@@ -1,5 +1,7 @@
 ### 1.6.3 (Next)
 - Warn on automatic formatting errors returned for non-config Terraform files.
+- Remove support for old auto-formatting config options.
+- Recursive and current file format options mutually exclusive.
 
 unit test for config.tfvars
 
