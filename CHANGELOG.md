@@ -2,8 +2,10 @@
 - Warn on automatic formatting errors returned for non-config Terraform files.
 - Remove support for old auto-formatting config options.
 - Recursive and current file format options mutually exclusive.
+- Improve package activation.
 
 unit test for config.tfvars
+double check unit tests since "things" seemed to have happened
 
 ### 1.6.2
 - Refactor auto formatting config options.
